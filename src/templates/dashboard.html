@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevOps Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <h1>DevOps Dashboard</h1>
+    <h2>Confluence Data</h2>
+    <!-- Display Confluence data here -->
+    <pre>{{ confluence_data | tojson(indent=2) }}</pre>
+
+    <h2>JIRA Data</h2>
+    <!-- Display JIRA data here -->
+    <pre>{{ jira_data | tojson(indent=2) }}</pre>
+
+    <h2>Dynatrace Data</h2>
+    <!-- Display Dynatrace data here -->
+    <pre>{{ dynatrace_data | tojson(indent=2) }}</pre>
+
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+</html>
